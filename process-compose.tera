@@ -1,0 +1,43 @@
+---
+whiskers:
+  version: "2.0.0"
+  matrix:
+    - flavor
+  filename: "themes/catppuccin-{{ flavor.identifier }}.yaml"
+---
+{%- set C = flavor.colors -%}
+{%- set accent = flavor.colors.mauve -%}
+style:
+  name: 'Catppuccin {{flavor.name}}'
+  body:
+    fgColor: '#{{C.text.hex}}'
+    bgColor: '#{{C.base.hex}}'
+    secondaryTextColor: '#{{accent.hex}}'
+    tertiaryTextColor: '#{{accent.hex}}'
+    borderColor: '#{{C.overlay2.hex}}'
+  stat_table:
+    keyFgColor: '#{{accent.hex}}'
+    valueFgColor: '#{{C.text.hex}}'
+    logoColor: '#{{accent.hex}}'
+  proc_table:
+    fgColor: '#{{C.text.hex}}'
+    fgWarning: '#{{C.peach.hex}}'
+    fgPending: '#{{C.overlay2.hex}}'
+    fgCompleted: '#{{C.green.hex}}'
+    fgError: '#{{C.red.hex}}'
+    headerFgColor: '#{{accent.hex}}'
+  help:
+    fgColor: '#{{C.text.hex}}'
+    keyColor: '#{{accent.hex}}'
+    hlColor: '#{{C.surface1.hex}}'
+    categoryFgColor: '#{{C.pink.hex}}'
+  dialog:
+    fgColor: '#{{C.pink.hex}}'
+    bgColor: '#{{accent.hex}}'
+    buttonFgColor: '#{{C.crust.hex}}'
+    buttonBgColor: '#{{accent.hex}}'
+    buttonFocusFgColor: '#{{C.crust.hex}}'
+    buttonFocusBgColor: '#{{accent.hex}}'
+    labelFgColor: '#{{C.rosewater.hex}}'
+    fieldFgColor: '#{{C.text.hex}}'
+    fieldBgColor: '#{{C.surface2.hex}}'
